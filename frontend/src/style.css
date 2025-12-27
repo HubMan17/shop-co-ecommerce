@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Custom Utilities */
+@layer components {
+  .container-custom {
+    @apply max-w-[1440px] mx-auto px-4 lg:px-24;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white px-8 py-4 rounded-full font-medium transition-all hover:bg-gray-800 inline-block text-center;
+  }
+
+  .btn-secondary {
+    @apply border border-black text-black px-8 py-4 rounded-full font-medium transition-all hover:bg-black hover:text-white inline-block text-center;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight;
+    font-family: 'Integral CF', sans-serif;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-[48px] font-bold;
+    font-family: 'Integral CF', sans-serif;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold;
+    font-family: 'Integral CF', sans-serif;
+  }
+}
